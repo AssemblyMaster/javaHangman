@@ -1,11 +1,12 @@
 
+import java.util.HashSet;
 import java.util.Scanner;
-import java.util.LinkedList;
+import java.util.Set;
 
 class Main
 {
     static String word = "unix";
-    static LinkedList<Character> guessedLetters = new LinkedList<>();
+    static Set<Character> guessedLetters = new HashSet<>();
     static String game = new String(); 
     public static void main(String[] args)
     {
