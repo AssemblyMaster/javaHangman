@@ -3,9 +3,9 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-class Main
+public class Hangman 
 {
-    static String word = "unix";
+    static String word = "unix gnu bruh";
     static Set<Character> guessedLetters = new HashSet<>();
     static String game = new String(); 
     public static void main(String[] args)
@@ -17,13 +17,14 @@ class Main
             constructGame();
             System.out.println(game);
 
-            if ( ! ( game.charAt( ( game.length() - 1 ) ) == '_' ) ) 
+            // winning conidtion is that no more _ are left in the game.
+            if ( ! ( game.contains( "_" ) ) )
             {
                 System.out.println("you won!");
                 break;
-            } 
+            }
             
-            System.out.println("\nenter your strings");
+            System.out.print("\nenter your strings: ");
             input = scanner.nextLine().toCharArray();
             for (char c : input) 
             {   
@@ -41,7 +42,11 @@ class Main
         game = "";
         for (int i = 0; i < word.length(); i++)
         {
-            if ( guessedLetters.contains( word.charAt( i ) ))
+            if ( word.charAt( i ) == ' ' )
+            {
+                game = game + ' ';
+            }
+            else if ( guessedLetters.contains( word.charAt( i ) ))
             {
                 game = game + word.charAt(i);
             }
