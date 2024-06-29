@@ -1,24 +1,7 @@
-{
-    "movies": [
-        "star wars",
-        "lord of the rings",
-        "back to the future"
-    ],
-    "books": [
-        "harry potter",
-        "diary of a wimpy kid"
-    ],
-    "presidents": [
-        "donald trump",
-        "joe biden",
-        "ronald ragen",
-        "george bush"
-    ],
-    "cars": [
-        "toyota",
-        "honda",
-        "ford"
-    ] 
+# format: words:hint/theme
 
+# examples:
+star wars:movie
+harry potter:book
 
-}
+# add your own shit tho
