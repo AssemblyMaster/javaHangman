@@ -7,6 +7,7 @@ import java.util.LinkedList;
 public class Hangman 
 {
     static String word = "missingno";
+    static String hint = "figureitout";
     static Set<Character> guessedLetters = new HashSet<>();
     static String game = new String();
     static LinkedList<String> games = new LinkedList<>(); 
@@ -33,6 +34,18 @@ public class Hangman
                     System.exit(1);
                 }
 
+            }
+            if ( args[i].equals("--hint") || args[i].equals("-h") )
+            {
+                try
+                {
+                    hint = args[ i + 1 ];
+                }
+                catch ( ArrayIndexOutOfBoundsException e)
+                {
+                    System.out.println("pleases input a hint");
+                    System.exit(1);
+                }
             }
             if ( args[i].equals("--lives") || args[i].equals("-l") )
             {
@@ -81,6 +94,7 @@ public class Hangman
             }
         } 
 
+        System.out.println("your hint is: " + hint);
         while ( ! (lives <= 0 ) )
         {
             constructGame();
