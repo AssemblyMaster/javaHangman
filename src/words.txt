@@ -1,0 +1,24 @@
+{
+    "movies": [
+        "star wars",
+        "lord of the rings",
+        "back to the future"
+    ],
+    "books": [
+        "harry potter",
+        "diary of a wimpy kid"
+    ],
+    "presidents": [
+        "donald trump",
+        "joe biden",
+        "ronald ragen",
+        "george bush"
+    ],
+    "cars": [
+        "toyota",
+        "honda",
+        "ford"
+    ] 
+
+
+}
